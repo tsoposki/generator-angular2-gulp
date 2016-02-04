@@ -1,5 +1,7 @@
 'use strict';
 
+var gutil = require('gulp-util');
+
 /**
  * Usage:
  * `$ NODE_ENV=<development/production> PORT=<port> gulp <task>`
@@ -53,7 +55,7 @@ var envPaths = {
 /**
  *  The main paths of your project handle these with care
  */
-var src = 'src';
+var src = './src';
 var app = `${src}/app`;
 var build = 'build';
 var assets = 'assets';
@@ -98,3 +100,12 @@ export const selectors = {
 	css: '/**/*.css',
 	specJs: '/**/*.spec.js'
 };
+
+export function errorHandler(title) {
+	'use strict';
+
+	return function(err) {
+		gutil.log(gutil.colors.red('[' + title + ']'), err.toString());
+		this.emit('end');
+	};
+}

@@ -6,7 +6,7 @@
   },
   "license": "MIT",
   "version": "0.0.1",
-	"keywords": "yeoman-generator, angular2, gulp, typescript, systemjs, karma, protractor, sass, ts, tsd, tslint, es6, eslint",
+  "keywords": "yeoman-generator, angular2, gulp, typescript, systemjs, karma, protractor, sass, ts, tsd, tslint, es6, eslint",
   "description": "A Yeoman generator for Angular2 using TypeScript, Gulp and SystemJS to bundle it for production.",
   "scripts": {
     "start": "gulp build serve"
@@ -45,6 +45,7 @@
     "gulp-typedoc": "1.2.1",
     "gulp-typescript": "2.10.0",
     "gulp-uglify": "1.5.1",
+    "gulp-util": "^3.0.7",
     "karma": "0.13.15",
     "karma-chrome-launcher": "0.1.4",
     "karma-coverage": "0.5.3",
